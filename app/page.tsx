@@ -1,6 +1,8 @@
 import { fetchJokes } from "./lib/notion";
 import { PickJokeOfTheMoment } from "./utility";
 
+export const revalidate = 1800; // re-run every half hour
+
 export default async function Home() {
   const jokes = await fetchJokes();
   const jokeOfTheMoment = PickJokeOfTheMoment(jokes);
