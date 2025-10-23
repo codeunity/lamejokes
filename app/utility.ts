@@ -1,4 +1,4 @@
-export const PickDailyJoke = (array: string[]) => {
+export const PickJokeOfTheMoment = (array: string[]) => {
   if (!Array.isArray(array) || array.length === 0) return null;
 
   const now = new Date();

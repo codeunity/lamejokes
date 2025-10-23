@@ -1,9 +1,9 @@
 import { fetchJokes } from "./lib/notion";
-import { PickDailyJoke } from "./utility";
+import { PickJokeOfTheMoment } from "./utility";
 
 export default async function Home() {
   const jokes = await fetchJokes();
-  const jokeOfTheMoment = PickDailyJoke(jokes);
+  const jokeOfTheMoment = PickJokeOfTheMoment(jokes);
 
   return (
     <div className="flex h-screen w-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black xl:p-64 p-20">
