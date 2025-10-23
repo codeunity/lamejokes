@@ -6,12 +6,11 @@ export const PickJokeOfTheMoment = (array: string[]) => {
   // Get local date string (YYYY-MM-DD)
   const today = now.toLocaleDateString("en-CA");
 
-  // Get current 3-hour time slot (0-7)
+  // Get current hour (0-23)
   const hour = now.getHours();
-  const timeSlot = Math.floor(hour / 3);
 
-  // Combine date and time slot for unique identifier
-  const seedString = `${today}-${timeSlot}`;
+  // Combine date and hour for unique identifier
+  const seedString = `${today}-${hour}`;
 
   // Simple stable hash from string → integer
   let hash = 0;
